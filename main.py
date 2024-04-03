@@ -5,7 +5,7 @@ def main(page: ft.Page):
     
     page.title = "Моё портфолио"
     # page.vertical_alignment = "start"
-
+    page.bgcolor = ft.colors.BLACK87
     # Фото и имя
     profile_pic = ft.CircleAvatar(
         content=ft.Icon(ft.icons.PERSON),

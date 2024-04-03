@@ -7,14 +7,11 @@ def style_card(content, width=True, padding: Optional[ft.Padding] = None):
     return ft.Card(
         content=ft.Container(
             content=content,
-            # border_radius=4,
-            # border=ft.Border(top=ft.BorderSide(1, ft.colors.GREY_500),
-            #                  left=ft.BorderSide(0),
-            #                  right=ft.BorderSide(0),
-            #                  bottom=ft.BorderSide(1, ft.colors.GREY_500)),
             width=width,
             padding=padding,
-            margin=ft.Margin(16, 16, 0, 0),
+            # margin=ft.Margin(16, 16, 0, 0),
+            bgcolor=ft.colors.BLUE_GREY_900,
+            border_radius=10,
         )
     )
 
@@ -67,6 +64,7 @@ def create_container(title: str,
         width=width,
         height=height,
         padding=padding,
+        bgcolor=ft.colors.BLACK12
         # alignment=ft.Alignment(x=0, y=0),
         
     )   
@@ -123,7 +121,8 @@ def project_card(project: dict):
                         ft.TextButton("View on GitHub", url=project['github']),
                     ],
                     alignment=ft.MainAxisAlignment.END,
-                ),
+                    
+                ), 
             ]
         )
     )
@@ -140,17 +139,3 @@ def skills_card(project: dict):
     )
     
 
-# def profile_card(profile: dict):
-#     return style_card(
-#         ft.Column(
-#             [
-#                 ft.Row([
-#                     ft.Icon(ft.icons.PHONE),
-#                     f"{style_title('Phone number')}: {style_text(profile['phone'])}"],
-#                     alignment=ft.MainAxisAlignment.CENTER),
-#                 f"{style_title("Email")}: {style_text(profile['email'])}",
-#                 f'{style_title("Telegram")}: {style_text(profile["Telegram"])}',
-#                 f'{style_title("Github")}: {style_text(profile["github"])}',
-#             ], alignment=ft.MainAxisAlignment.CENTER
-#         )
-#     )
