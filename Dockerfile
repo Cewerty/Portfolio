@@ -1,5 +1,5 @@
 # Используйте базовый образ Python
-FROM python:3.8-slim-buster
+FROM python:3.10-slim-buster
 
 # Установите рабочую директорию внутри контейнера
 WORKDIR /app
