@@ -2,9 +2,15 @@ import flet as ft
 from styles import style_title, contact_list_item, create_container, project_card, skills_card
 
 def main(page: ft.Page):
+    """
+    Создайте главную страницу с профилем, контактами, навыками и проектами для веб-сайта-портфолио.
+
+    Параметры:
+    page (ft.Page): Объект страницы, на который будет добавлен контент.
+
+    """
     
     page.title = "Моё портфолио"
-    # page.vertical_alignment = "start"
     page.bgcolor = ft.colors.BLACK87
     # Фото и имя
     profile_pic = ft.CircleAvatar(
@@ -81,4 +87,7 @@ def main(page: ft.Page):
         expand=True, 
     ),
     )
-ft.app(target=main, view=ft.AppView.WEB_BROWSER) 
+
+#Вывод сайта в браузер
+if __name__ == '__main__':
+    ft.app(target=main, view=ft.AppView.WEB_BROWSER) 
